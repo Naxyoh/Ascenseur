@@ -1,5 +1,5 @@
 #ifndef def_carte
-#def def_carte
+#define def_carte
 
 #include<iostream>
 #include<string>
@@ -32,4 +32,4 @@ bool operator==(Carte const& a, Carte const& b);
 bool operator!=(Carte const& a, Carte const& b);
 bool operator<(Carte const &a, Carte const& b);
 
-#endif
+#endif //def_carte

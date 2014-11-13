@@ -15,13 +15,13 @@ Deck::~Deck()
 
 }
 
-void Deck::initialiserDeck(Deck &deck)
+void Deck::initialiserDeck()
 {
 	for(int i = 0; i<4; i++)
     {
         for(int j = 2; j<=14; j++)
         {
-            deck.m_listeCarte.push_back(Carte((Couleur)i,(Valeur)j));
+            m_listeCarte.push_back(Carte((Couleur)i,(Valeur)j));
         }
 
     }

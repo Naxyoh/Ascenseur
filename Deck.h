@@ -12,8 +12,8 @@ class Deck
 {
     public:
         Deck();
-        Deck(bool); // Sert à initialiser un deck vierge
         virtual ~Deck();
+        void initialiserDeck(); // Sert à initialiser un deck vierge
         void ajouterCartes(std::vector<Carte>); //ajoute une liste de carte à un deck
         void ajouterCarte(Carte*); // ajoute une seule carte à un deck
         //Carte piocherCarte(int, int);

@@ -1,23 +1,11 @@
 #include "Deck.h"
+#include "Joueur.h"
 
 using namespace std;
 
-Deck::Deck() : m_listeCarte(0)
+Deck::Deck()
 {
-    
-}
-
-
-
-Deck::~Deck()
-{
-
-
-}
-
-void Deck::initialiserDeck()
-{
-	for(int i = 0; i<4; i++)
+    for(int i = 0; i<4; i++)
     {
         for(int j = 2; j<=14; j++)
         {
@@ -26,7 +14,17 @@ void Deck::initialiserDeck()
 
     }
 }
-	
+
+Deck::Deck(bool b) : m_listeCarte(0) // Sert à creer un deck vide
+{
+
+}
+
+Deck::~Deck()
+{
+
+
+}
 
 
 void Deck::ajouterCartes(vector<Carte> listeCarte)
@@ -34,12 +32,11 @@ void Deck::ajouterCartes(vector<Carte> listeCarte)
     m_listeCarte = listeCarte;
 }
 
-//Carte Deck::piocherCarte(int val, int coul)
-//{
-//    Carte piochee = m_listeCarte[val+13*coul-1];
-//    m_listeCarte.erase(m_listeCarte.begin()+(Valeur)val+13*(Valeur)coul-1);
-//    return piochee;
-//}
+void Deck::retirerCarte(int numCarte)
+{
+    m_listeCarte.erase(m_listeCarte.begin()+numCarte-1);
+
+}
 
 void Deck::piocherCarte(int nbCarte, Deck &pioche)
 {
@@ -61,7 +58,6 @@ void Deck::ajouterCarte(Carte *carte)
 
 void Deck::afficherDeck() const
 {
-    cout <<"Le deck contient :"<<endl;
     for(size_t i = 0; i<m_listeCarte.size(); i++)
     {
         m_listeCarte[i].afficher();

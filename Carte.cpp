@@ -99,6 +99,12 @@ void Carte::setValeur(Valeur v)
     m_valeur = v;
 }
 
+void Carte::jouerCarte(Carte carte)
+{
+
+////////////////////A compléter//////////////
+}
+
 //////////////////////////////////////////////////////////////////////
 /////////////////////////////Opérator/////////////////////////////////
 /////////////////////////////////////////////////////////////////////
@@ -115,4 +121,9 @@ bool operator!=(Carte const& a, Carte const& b)
 bool operator<(Carte const &a, Carte const& b)
 {
     return (int)a.getValeur()<(int)b.getValeur();
+}
+
+bool operator>(Carte const &a, Carte const& b)
+{
+    return (int)a.getValeur()>(int)b.getValeur();
 }

@@ -17,6 +17,7 @@ class Carte
 		Valeur getValeur() const;
 		void setCouleur(Couleur c);
 		void setValeur(Valeur v);
+		void jouerCarte(Carte carte);
 	protected :
 	    Couleur m_couleur;
 		Valeur m_valeur;
@@ -28,4 +29,5 @@ class Carte
 bool operator==(Carte const& a, Carte const& b);
 bool operator!=(Carte const& a, Carte const& b);
 bool operator<(Carte const &a, Carte const& b);
+bool operator>(Carte const &a, Carte const& b);
 

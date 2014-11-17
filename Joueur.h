@@ -28,6 +28,8 @@ class Joueur
 
         //fonction de jeu
         void jouerCarte(int);
+        void calculerPoint();
+        
         //affichage
         void afficherJoueur();
 

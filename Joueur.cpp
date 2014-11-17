@@ -86,6 +86,18 @@ void Joueur::jouerCarte(int numCarte)
 
 }
 
+void Joueur::calculerPoint()
+{
+    if(m_pliEffectue == m_annonce)
+    {
+        m_score = 10*m_annonce; //Faut vérifier le nombre de point gagner
+    }
+    else
+    {
+        m_score = -5*(Abs(m_pliEffectue - m_annonce)); // Pareil faut vérifier le nombre de point et la fonction valeur absolue
+    }
+}
+
 void Joueur::afficherJoueur()
 {
     cout<<"Joueur : "<<m_nom<<endl;

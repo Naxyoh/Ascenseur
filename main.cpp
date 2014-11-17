@@ -94,23 +94,26 @@ int main()
 
     cout<<"Combien de manche voulez-vous jouer ? ";
     cin>>NbrManche;
+    
+    int NumManche = 0;
 
-
-    while(NbrManche--)
+    while(NumManche<NbrManche)
     {
         Deck pioche = Deck();
         Deck Atout = Deck(true);
         Atout.piocherCarte(1, pioche);
+        cout<<"Manche "<<NumManche<<endl<<endl;
         cout<<"L'atout est : ";
         Atout.afficherDeck();
+        cout<<endl;
 
-        for(size_t i = 0; i<listeJoueur.size();i++) // Souci : on change de main entre de levée...
+        for(size_t i = 0; i<listeJoueur.size();i++) 
         {
             Deck maMain = Deck(true);
             maMain.piocherCarte(NbrManche+1, pioche);
             listeJoueur[i]->setMain(maMain);
         }
-
+        
         for(size_t i = 0; i<listeJoueur.size();i++)
         {
             listeJoueur[i]->afficherJoueur();
@@ -152,7 +155,7 @@ int main()
             cout<<joueurGagnant<<" gagne la levee avec ";
             carteGagnante.afficher();
             cout<<endl;
-
+            NumBranche++;
         }
 
 
